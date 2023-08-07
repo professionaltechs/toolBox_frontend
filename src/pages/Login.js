@@ -19,7 +19,7 @@ export const Login = () => {
     }
   return (
     <div className="loginContainer">
-      <div class="loginInnerContainer">
+      <div class="loginInnercontainer">
         <div class="screen">
           <div class="screen__content">
             <div class="login">

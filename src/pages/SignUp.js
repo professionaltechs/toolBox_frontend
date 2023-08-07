@@ -4,7 +4,7 @@ import "../assets/css/login.css";
 export const Signup = () => {
   return (
     <div className="signUpContainer">
-      <div class="signupInnerContainer">
+      <div class="signupInnercontainer">
         <div class="screen-signup">
           <h2>Sign Up</h2>
           <div class="screen__content">

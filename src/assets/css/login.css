@@ -11,7 +11,7 @@
 	background: linear-gradient(90deg, #bcf3ff, #06B8DE);		
 }
 
-.loginInnercontainer, .signupInnerContainer {
+.loginInnercontainer, .signupInnercontainer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
