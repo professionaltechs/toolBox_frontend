@@ -9,6 +9,7 @@ html {
   }
   .App{
     position: relative;
+
   }
   .side-menu{
     position: fixed;
@@ -57,9 +58,12 @@ html {
   .navigation ul {
     margin-top: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     list-style: none;
   }
+ 
   .faItem{
     padding-top: 7px;
   }
@@ -69,9 +73,9 @@ html {
     padding: 3px;
   }
   .profile-para{
-    margin-top: 0px;
     font-weight: bolder;
     text-align: center;
+    margin-bottom: 0px;
   }
   .profile-para > span{
     font-weight: lighter;
@@ -119,4 +123,4 @@ html {
   .products-link{
     margin-right: 40px;
   }
-  
+  a{text-decoration: none;}

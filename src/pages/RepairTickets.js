@@ -17,6 +17,8 @@ import {
   faHouse,
   faDesktop,
   faPencil,
+  faArrowUp,
+  faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const RepairTickets = () => {
@@ -34,11 +36,12 @@ export const RepairTickets = () => {
           <div className="menu-items">
             <div>
               <div className="link-div">
-                <a className="cash-register-link" href="No link">
+              <a className="cash-register-link" href="No link">
                   <FontAwesomeIcon
                     className="fa-xl cashregister"
                     icon={faCashRegister}
                   />
+                   
                   <span className="link-text">Cash Register</span>
                 </a>
               </div>
@@ -114,13 +117,13 @@ export const RepairTickets = () => {
         </div>
       </div>
 
-      <div className="header bg-white rounded-5 d-flex justify-content-around  col-12">
+      <div className="header bg-white rounded-5 d-flex justify-content-around align-items-center  col-12">
         <div className="logo d-flex justify-content-center ms-5  col-4">
           <div>
             <h6 className="logo-heading">Toolbox.co</h6>
           </div>
         </div>
-        <div className="navigation d-flex justify-content-center col-8">
+        <div className="navigation d-flex justify-content-center align-items-center col-8">
           <div>
             <ul>
               <li>
@@ -168,8 +171,9 @@ export const RepairTickets = () => {
         </div>
       </div>
 
+      
       <div className="col-12 mt-4  d-flex justify-content-center align-items-center">
-        <div className="col-9 bg-white rounded-4 gap-5 p-3 d-flex justify-content-between align-items-center">
+        <div style={{marginLeft:"150px"}} className="col-10 bg-white rounded-4 gap-5 p-3 d-flex justify-content-between align-items-center">
           <div className=" rounded-4 gap-4 p-1  d-flex justify-content-center align-items-center">
             <div>
               <FontAwesomeIcon
@@ -181,7 +185,7 @@ export const RepairTickets = () => {
             <div className="text-center">
               <h7 style={{ color: "#B7B7B7" }}>Total active repairs</h7>
               <p style={{ fontSize: "13px" }} className="m-0">
-                16% this month
+              <FontAwesomeIcon style={{color:"#338659"}} icon={faArrowDown}></FontAwesomeIcon> <span style={{color:"#338659"}}>16%</span> this month
               </p>
             </div>
             <div>
@@ -200,7 +204,7 @@ export const RepairTickets = () => {
             <div className="text-center">
               <h7 style={{ color: "#B7B7B7" }}>New repairs(Today)</h7>
               <p style={{ fontSize: "13px" }} className="m-0">
-                16% this month
+               <FontAwesomeIcon style={{color:"#A71A4C"}} icon={faArrowUp}></FontAwesomeIcon> <span style={{color:"#A71A4C"}}>16%</span> this month
               </p>
             </div>
             <div>
@@ -218,9 +222,7 @@ export const RepairTickets = () => {
             </div>
             <div className="text-center">
               <h7 style={{ color: "#B7B7B7" }}>Active Now</h7>
-              <p style={{ fontSize: "13px" }} className="m-0">
-                16% this month
-              </p>
+            
             </div>
             <div>
               <h2>189</h2>
@@ -230,7 +232,7 @@ export const RepairTickets = () => {
       </div>
 
       <div className="col-12 mb-4 d-flex justify-content-center align-items-center mt-2">
-        <div className="col-9 bg-white rounded-4 d-flex flex-column justify-content-center align-items-center">
+        <div style={{marginLeft:"150px"}} className="col-10 bg-white rounded-4 d-flex flex-column justify-content-center align-items-center">
           <div className="col-11 p-3 rounded-4 d-flex gap-3 justify-content-between bg-white align-items-center">
             <div>
               <h5 style={{ fontWeight: "bolder" }}>Active Tickets</h5>
@@ -351,24 +353,26 @@ export const RepairTickets = () => {
                   <td>Jane Cooper</td>
                   <td>(225) 555-0118</td>
                   <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
+                    Apple <br></br> <span>Iphone14</span>
                   </td>
                   <td>Screen Replacement</td>
                   <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                    <br></br> Last Update: <span>2:43Pm</span>{" "}
+                    <p className="m-0">12/07/2023</p>
+                    <p className="m-0">Tech: Nile Khokar</p>
+                    <p className="m-0">Last Update: 2:43 Pm</p>
                   </td>
                   <td>t100</td>
                   <td>
-                    <p
+                    <a
                       className="text-success"
                       style={{
                         backgroundColor: "#A7E7D8",
                         border: "solid 1px #55A791",
+                        padding:"3px 10px"
                       }}
                     >
                       New
-                    </p>
+                    </a>
                   </td>
                 </tr>
                 <tr className="text-center">
@@ -383,15 +387,17 @@ export const RepairTickets = () => {
                   </td>
                   <td>t100</td>
                   <td>
-                    <p
-                      className="text-success"
+                    <a
+                      className="text-alert"
                       style={{
-                        backgroundColor: "#A7E7D8",
-                        border: "solid 1px #55A791",
+                        padding:"3px 10px",
+                        color:"red",
+                        backgroundColor: "#FAC7C3",
+                        border: "solid 1px #A95C5B",
                       }}
                     >
-                      New
-                    </p>
+                      Not fixable
+                    </a>
                   </td>
                 </tr>
                 <tr className="text-center">
@@ -406,15 +412,12 @@ export const RepairTickets = () => {
                   </td>
                   <td>t100</td>
                   <td>
-                    <p
-                      className="text-success"
-                      style={{
-                        backgroundColor: "#A7E7D8",
-                        border: "solid 1px #55A791",
-                      }}
+                    <a
+                    style={{padding:"3px 10px"}}
+                      className="bg-primary text-light"
                     >
-                      New
-                    </p>
+                      Sent Out
+                    </a>
                   </td>
                 </tr>
                 <tr className="text-center">
@@ -429,15 +432,12 @@ export const RepairTickets = () => {
                   </td>
                   <td>t100</td>
                   <td>
-                    <p
-                      className="text-success"
-                      style={{
-                        backgroundColor: "#A7E7D8",
-                        border: "solid 1px #55A791",
-                      }}
+                    <a
+                      className="bg-warning text-dark"
+                      style={{padding:"3px 10px"}}
                     >
-                      New
-                    </p>
+                      Finished
+                    </a>
                   </td>
                 </tr>
                 <tr className="text-center">
@@ -452,15 +452,88 @@ export const RepairTickets = () => {
                   </td>
                   <td>t100</td>
                   <td>
-                    <p
-                      className="text-success"
+                    <a
                       style={{
-                        backgroundColor: "#A7E7D8",
-                        border: "solid 1px #55A791",
+                        padding:"3px 10px",
+                        color:"#3B5F82",
+                        backgroundColor: "#DF9FFF",
+                        border: "solid 1px #DF9FFF",
                       }}
                     >
-                      New
-                    </p>
+                      Waiting on customer
+                    </a>
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td>Jane Cooper</td>
+                  <td>(225) 555-0118</td>
+                  <td>
+                    Apple <br></br> <span>Iphone14</span>{" "}
+                  </td>
+                  <td>Screen Replacement</td>
+                  <td>
+                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
+                  </td>
+                  <td>t100</td>
+                  <td>
+                    <a
+                      style={{
+                        padding:"3px 10px",
+                        color:"#3B5F82",
+                        backgroundColor: "#DF9FFF",
+                        border: "solid 1px #DF9FFF",
+                      }}
+                    >
+                      Waiting on customer
+                    </a>
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td>Jane Cooper</td>
+                  <td>(225) 555-0118</td>
+                  <td>
+                    Apple <br></br> <span>Iphone14</span>{" "}
+                  </td>
+                  <td>Screen Replacement</td>
+                  <td>
+                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
+                  </td>
+                  <td>t100</td>
+                  <td>
+                    <a
+                      style={{
+                        padding:"3px 10px",
+                        color:"#3B5F82",
+                        backgroundColor: "#DF9FFF",
+                        border: "solid 1px #DF9FFF",
+                      }}
+                    >
+                      Waiting on customer
+                    </a>
+                  </td>
+                </tr>
+                <tr className="text-center">
+                  <td>Jane Cooper</td>
+                  <td>(225) 555-0118</td>
+                  <td>
+                    Apple <br></br> <span>Iphone14</span>{" "}
+                  </td>
+                  <td>Screen Replacement</td>
+                  <td>
+                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
+                  </td>
+                  <td>t100</td>
+                  <td>
+                    <a
+                      style={{
+                        padding:"3px 10px",
+                        color:"#3B5F82",
+                        backgroundColor: "#DF9FFF",
+                        border: "solid 1px #DF9FFF",
+                      }}
+                    >
+                      Waiting on customer
+                    </a>
                   </td>
                 </tr>
               </tbody>
