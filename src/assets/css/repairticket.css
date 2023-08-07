@@ -1,0 +1,122 @@
+html {
+    overflow-x: hidden;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background-color: #E9E8EE;
+    overflow-x: hidden;
+  }
+  .App{
+    position: relative;
+  }
+  .side-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #06B8DE;
+    height: 100vh;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .side-menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .header {
+    position: relative;
+    z-index: -1;
+    transform: scale(1.02);
+  }
+  
+  
+  .menu-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .menu-items a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+  }
+  .link-div{
+    padding: 20px;
+  }
+  .link-text{
+    margin-left: 10px;
+  }
+  .menu-items > div{
+    text-align: center;
+    width: 100%;
+    border-bottom: solid 1px white;
+  }
+  .navigation ul {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  .faItem{
+    padding-top: 7px;
+  }
+  .input-form{
+    background-color: #D8D8D8;
+    display: flex;
+    padding: 3px;
+  }
+  .profile-para{
+    margin-top: 0px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .profile-para > span{
+    font-weight: lighter;
+    font-size: 14px;
+  }
+  
+  .search{
+    padding-left: 10px;
+    width: 200px;
+    height: 30px;
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    position: relative;
+  }
+  .logo-heading{
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .profile-image{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  .repairs-link,.devices-link,.invoice-link{
+    margin-right: 45px;
+  }
+  .customers-link{
+    margin-right: 30px;
+  }
+  .cash-register-link{
+    margin-right: 5px;
+  }
+  .appointment-link{
+    margin-right: 15px;
+  }
+  .products-link{
+    margin-right: 40px;
+  }
+  
