@@ -21,6 +21,7 @@ import {
   faArrowDown,
   faUserCheck
 } from "@fortawesome/free-solid-svg-icons";
+import { SideBarOne } from "../components/SideBarOne";
 
 export const RepairTickets = () => {
   return (
