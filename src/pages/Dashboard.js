@@ -24,6 +24,7 @@ import {
   faTruck,
   faCartFlatbed,
   faBitcoinSign,
+  faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/css/dashboard.css"
@@ -41,7 +42,8 @@ import{
 import { Bar } from "react-chartjs-2";
 
 import { Doughnut } from "react-chartjs-2";
-import { SideBarTwo } from "../components/SideBarTwo";
+import { SideBarThree } from "../components/SideBarThree";
+
 ChartJs.register(
   ArcElement,
   BarElement,
@@ -105,394 +107,92 @@ export const Dashboard = () => {
 
   return (
     <div className="App">
-      <SideBarTwo/>
-
-      <div className="header d-flex justify-content-around  col-12">
-        <div className="logo d-flex justify-content-center ms-5  col-4">
-          <div>
-            <h6 className="logo-heading">Toolbox.co</h6>
-          </div>
-        </div>
-        <div className="navigation d-flex justify-content-center  col-8">
-          <div>
-            <ul>
-              <li>
-                <form className="input-form">
-                  <a href="d">
-                    <FontAwesomeIcon
-                      style={{ color: "#A2A2A2" }}
-                      className="faMagnifyingGlass fa-lg"
-                      icon={faMagnifyingGlass}
-                    />
-                  </a>
-                  <input
-                    type={"search"}
-                    placeholder="Search"
-                    className="search"
-                  ></input>
-                </form>
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  style={{ color: "#A2A2A2" }}
-                  className="faGlobe faItem fa-xl"
-                  icon={faGlobe}
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  style={{ color: "#A2A2A2" }}
-                  className="faItem fa-xl"
-                  icon={faGear}
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  style={{ color: "#A2A2A2" }}
-                  className="faItem fa-xl"
-                  icon={faClock}
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  style={{ color: "#505050" }}
-                  className="faItem fa-xl"
-                  icon={faBell}
-                />
-              </li>
-              <li>
-                <img
-                  src="./profile.png"
-                  className="profile-image"
-                  alt="Not loaded"
-                ></img>
-              </li>
-              <li>
-                <p className="profile-para">
-                  Musfiq{" "}
-                  <span>
-                    <br></br> Admin
-                  </span>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mobile-navbar-button">
-          <FontAwesomeIcon className="faBars" icon={faBars} />
-          <FontAwesomeIcon className="faXmark" icon={faXmark} />
-        </div>
-      </div>
-
-      <div className="col-12  container d-flex justify-content-center align-items-center gap-3">
-        <div className="col-md-8">
-          <h5 className="ms-4 mb-2">Hello Nile 👏</h5>
-          <div className=" col-12 d-flex justify-content-between align-items-center  bg-white p-3 rounded-5">
-            <div className="col-md-4 d-flex justify-content-center align-items-center gap-4">
-              <div>
-                <FontAwesomeIcon
-                  style={{
-                    color: "#599778",
-                    borderRadius: "50%",
-                    backgroundColor: "#D5FFED",
-                    width: "80px",
-                    height: "40px",
-                    padding: "10px",
-                  }}
-                  className="fa-2xl"
-                  icon={faSackDollar}
-                />
+      <SideBarThree/>
+      <div className='header'>
+              <div className='navbar'>
+                  <div className='logo'>
+                    <h4>ToolBox.co</h4>
+                  </div>
+                  <div className='navbar-links'>
+                    <div className='input-search'>
+                      <div className='search'>
+                      <FontAwesomeIcon style={{color:"#8A8A8A"}} className='fa-lg' icon={faMagnifyingGlass}></FontAwesomeIcon>
+                      <input type='search' placeholder='Search'></input>
+                      </div>
+                      <div>
+                        <FontAwesomeIcon   className="fa-xl" icon={faGlobe}></FontAwesomeIcon>
+                      </div>
+                    <div>
+                      <FontAwesomeIcon  className="fa-xl" icon={faGear}></FontAwesomeIcon>
+                    </div>
+                  <div>
+                      <FontAwesomeIcon  className='fa-xl' icon={faClock}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <FontAwesomeIcon  className='fa-xl' icon={faBell}></FontAwesomeIcon>
+                    </div>
+                    <div className='profile'>
+                        <div>
+                          <img src='./profile.png' alt='not working' className='profile-image'></img>
+                        </div>
+                        <div>
+                          <h5>
+                            Musfiq
+                          </h5>
+                          <p>Admin</p>
+                        </div>
+                    </div>
               </div>
-              <div>
-                <h5
-                  style={{
-                    margin: "0px",
-                    fontWeight: "lighter",
-                    fontSize: "14px",
-                  }}
-                >
-                  Earning
-                </h5>
-                <h3 style={{ margin: "0px" }}>$198k</h3>
-                <h7 style={{ margin: "0px", fontSize: "13px" }}>
-                  27% increase
-                </h7>
               </div>
             </div>
-            <div className="col-md-4 d-flex justify-content-center align-items-center gap-4">
-              <div>
-                <FontAwesomeIcon
-                  style={{
-                    color: "#3471AA",
-                    borderRadius: "50%",
-                    backgroundColor: "#C9F1FF",
-                    width: "80px",
-                    height: "40px",
-                    padding: "10px",
-                  }}
-                  className="fa-2xl"
-                  icon={faSackDollar}
-                />
-              </div>
-              <div>
-                <h5
-                  style={{
-                    margin: "0px",
-                    fontWeight: "lighter",
-                    fontSize: "14px",
-                  }}
-                >
-                  Earning
-                </h5>
-                <h3 style={{ margin: "0px" }}>$198k</h3>
-                <h7 style={{ margin: "0px", fontSize: "13px" }}>
-                  27% increase
-                </h7>
-              </div>
             </div>
-            <div className="col-md-4 d-flex justify-content-center align-items-center gap-4">
-              <div>
-                <FontAwesomeIcon
-                  style={{
-                    color: "#A73759",
-                    borderRadius: "50%",
-                    backgroundColor: "#FFC2EC",
-                    width: "80px",
-                    height: "40px",
-                    padding: "10px",
-                  }}
-                  className="fa-2xl"
-                  icon={faSackDollar}
-                />
-              </div>
-              <div>
-                <h5
-                  style={{
-                    margin: "0px",
-                    fontWeight: "lighter",
-                    fontSize: "14px",
-                  }}
-                >
-                  Earning
-                </h5>
-                <h3 style={{ margin: "0px" }}>$198k</h3>
-                <h7 style={{ margin: "0px", fontSize: "13px" }}>
-                  27% increase
-                </h7>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="col-md-3  stats2  rounded-5 ">
-          <div className=" col-md-12 p-3 d-flex gap-2 justify-content-between align-items-center">
-            <div>
-              <h5 style={{ fontWeight: "lighter", fontSize: "14px" }}>
-                Earning
-              </h5>
-              <h3 style={{ margin: "0px" }}>$198k</h3>
-              <h7 style={{ margin: "0px", fontSize: "13px" }}>27% increase</h7>
-            </div>
-            <div>
-              <img
-                src="./person.jpg"
-                alt="Not found"
-                width={150}
-                height={120}
-              ></img>
-            </div>
-          </div>
-        </div>
-      </div>
+            <div className="user-stats">
+                <div className="first-div">
+                  <h3>Hello Nile 👏</h3>
+                  <div className="nile-stats" style={{width:"100%"}}>
+                    <div className="flex-stats">
+                      <div>
+                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      </div>
+                      <div>
+                        <h4>Earning</h4>
+                        <h2>$198k</h2>
+                        <p>
+                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex-stats">
+                      <div>
+                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      </div>
+                      <div>
+                        <h4>Earning</h4>
+                        <h2>$198k</h2>
+                        <p>
+                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex-stats">
+                      <div>
+                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      </div>
+                      <div>
+                        <h4>Earning</h4>
+                        <h2>$198k</h2>
+                        <p>
+                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="second-div">
 
-      <div className="col-md-12 container mt-4 d-flex justify-content-center align-items-center  gap-3">
-        {/* <div className="col-md-6" style={{padding: "20px", width: "40%",backgroundColor: "white"}}>
-        <h5>Overview</h5>
-        <p style={{fontSize: "12px"}}>Monthly Earning</p>
-        <Bar style={{width: "100%"}} data={data} options={options}></Bar>
-    
-        </div> */}
-        {/* <div className="col-md-2" style={{padding:"20px",backgroundColor: "white"}}>
-    
-          <Doughnut style={{width: "100%"}} data={data2} options = {options2}>
-          </Doughnut>
-    
-        </div> */}
-        <div className="col-md-3 p-1 ">
-          <div className="col-12 bg-white rounded-3 p-2 ">
-            <div>
-              <h5>Calendar</h5>
+                </div>
             </div>
-            <div className="col-12">
-              <Calendar
-                className="reactCalendar"
-                onChange={onChange}
-                value={date}
-              ></Calendar>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="col-12 gap-2 d-flex justify-content-center mt-3 ms-5 align-items-center">
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faQrcode}
-          />
-          <p className="m-0 text-white">Dashboard</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faUsers}
-          />
-          <p className="m-0 text-white">Customers</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faWrench}
-          />
-          <p className="m-0 text-white">Repairs</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faCalendarCheck}
-          />
-          <p className="m-0 text-white">Appointments</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faTruck}
-          />
-          <p className="m-0 text-white">Stock take</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faQrcode}
-          />
-          <p className="m-0 text-white">Sales Reports</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faQrcode}
-          />
-          <p className="m-0 text-white">End of Day</p>
-        </div>
-      </div>
-
-      <div className="col-12 mb-2 mt-2 gap-2 d-flex justify-content-center ms-5 align-items-center">
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faQrcode}
-          />
-          <p className="m-0 text-white">Expenses</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faQrcode}
-          />
-          <p className="m-0 text-white">Products</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faMobileScreenButton}
-          />
-          <p className="m-0 text-white">Devices</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faCartFlatbed}
-          />
-          <p className="m-0 text-white">Inventory</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faFilePdf}
-          />
-          <p className="m-0 text-white">Invoices</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            style={{ color: "white" }}
-            className="fa-2xl"
-            icon={faQrcode}
-          />
-          <p className="m-0 text-white">Repair reports</p>
-        </div>
-        <div
-          style={{ width: "140px" }}
-          className="tabs p-3 text-center rounded-2"
-        >
-          <FontAwesomeIcon
-            className="fa-2xl"
-            icon={faBitcoinSign}
-            style={{ color: "#EFA23A" }}
-          />
-          <p className="m-0 text-white">Integrations</p>
-        </div>
-      </div>
     </div>
   );
 };

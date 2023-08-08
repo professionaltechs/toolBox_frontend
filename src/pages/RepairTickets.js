@@ -5,102 +5,19 @@ import {
   faClock,
   faBell,
   faMagnifyingGlass,
-  faWrench,
-  faMobileScreenButton,
   faUsers,
-  faFilePdf,
-  faBoxOpen,
-  faCalendarCheck,
-  faCashRegister,
-  faCartPlus,
-  faUser,
-  faHouse,
   faDesktop,
-  faPencil,
   faArrowUp,
   faArrowDown,
   faUserCheck
 } from "@fortawesome/free-solid-svg-icons";
-import { SideBarOne } from "../components/SideBarOne";
+import { SideBarThree } from "../components/SideBarThree";
 
 export const RepairTickets = () => {
   return (
     <div className="App">
-        <div className="side-menu">
-              <div className="home-icon">
-                      <FontAwesomeIcon style={{color:"white"}} className="fa-2xl" icon={faHouse}></FontAwesomeIcon>
-              </div>
-              <div className="navigation">
-                <ul>
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl cash-register" icon={faCashRegister}></FontAwesomeIcon>
-                    <a  href="no link">
-                    Cash Register
-                    </a>
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl repairs" icon={faWrench}></FontAwesomeIcon>
-                    <a href="no link">
-                    Repairs
-                    </a>
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl devices" icon={faMobileScreenButton}></FontAwesomeIcon>
-                    <a href="no link">
-                    Devices
-                    </a>
-                    
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl customers" icon={faUser}></FontAwesomeIcon>
-                    <a href="no link">
-                    Customers
-                    </a>
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl invoice" icon={faFilePdf}></FontAwesomeIcon>
-                    <a href="no link">
-                    Invoice
-                    </a>
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl purchase-order" icon={faBoxOpen}></FontAwesomeIcon>
-                    <a href="no link" className="purchase-link">
-                    Purchase Order
-                    </a>
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl appointment" icon={faCalendarCheck}></FontAwesomeIcon>
-                    <a href="no link">
-                    Appointment
-                    </a>
-                    </li>
-
-                  <li>
-                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl products" icon={faCartPlus}></FontAwesomeIcon>
-                    <a href="no link">
-                    Products
-                    </a>
-                    </li>
-                </ul>
-              </div>
-              <div className="notes-icon">
-                <div>
-                  <FontAwesomeIcon style={{color:"white"}} className="fa-md" icon={faPencil}></FontAwesomeIcon>
-                  </div>
-                  <div>
-                  <p className="notes-para">New-Note</p>
-                  </div>
-              </div>
-            </div>
-
-            <div className='header'>
+      <SideBarThree/>
+      <div className='header'>
               <div className='navbar'>
                   <div className='logo'>
                     <h4>ToolBox.co</h4>
@@ -227,6 +144,7 @@ export const RepairTickets = () => {
               <div className="table">
                 <table>
                   <thead>
+                    <tr>
                     <th>Customer Name</th>
                     <th>Phone Number</th>
                     <th>Device</th>
@@ -234,6 +152,7 @@ export const RepairTickets = () => {
                     <th>Date Created</th>
                     <th>Ticket #</th>
                     <th>Status</th>
+                    </tr>
                   </thead>
                   <tbody>
                     <tr>
@@ -243,7 +162,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created first-dateCreated"><p>12/07/2023</p><p>Tech:Nile Khokar</p><p>Last Update: 2:43Pm</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-new">New</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -252,7 +171,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-notfix">Not fixable</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -261,7 +180,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-out">Sent Out</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -270,7 +189,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-new">New</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -279,7 +198,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-new">New</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -288,7 +207,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-finish">Finished</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -297,7 +216,7 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-wait">Waiting on Customer</button></td>
                     </tr>
                     <tr>
                       <td>Jane Cooper</td>
@@ -306,10 +225,56 @@ export const RepairTickets = () => {
                       <td>Screen Replacement</td>
                       <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
                       <td>t100</td>
-                      <td><button className="status-btn">New</button></td>
+                      <td><button className="status-btn btn-finish">Finished</button></td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+
+              <div className="data-container">
+                <div>
+                  <p>Showing data 1 to 8 of 256k entries</p>
+                </div>   
+                <div className="pagination">
+  <button className="btn">
+    <svg
+         xmlns="http://www.w3.org/2000/svg"
+         className="btn-icon"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor"
+         strokeWidth="2"
+         >
+      <path
+            stroke-strokelinecap="round"
+            stroke-strokelinejoin="round"
+            d="M15 19l-7-7 7-7"
+            />
+    </svg>
+  </button>
+  <a href="No link" className="page-link page-link--current">1</a>
+  <a href="No link" className="page-link">2</a>
+  <a href="No link" className="page-link">3</a>
+  <a href="No link" className="page-link">4</a>
+  <span className="dots">...</span>
+  <a href="No link" className="page-link">40</a>
+  <button className="btn">
+    <svg
+         xmlns="http://www.w3.org/2000/svg"
+         className="btn-icon"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor"
+         strokeWidth="2"
+         >
+      <path
+           stroke-strokelinecap="round"
+            stroke-strokelinejoin="round"
+            d="M9 5l7 7-7 7"
+            />
+    </svg>
+  </button>
+</div>
               </div>
             </div>
     </div>
