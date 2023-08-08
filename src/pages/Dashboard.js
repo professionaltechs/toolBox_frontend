@@ -25,6 +25,9 @@ import {
   faCartFlatbed,
   faBitcoinSign,
   faArrowUp,
+  faArrowDown,
+  faMoneyCheckDollar,
+  faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/css/dashboard.css"
@@ -153,44 +156,53 @@ export const Dashboard = () => {
                   <div className="nile-stats" style={{width:"100%"}}>
                     <div className="flex-stats">
                       <div>
-                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      <FontAwesomeIcon className="fa-2xl icons icon1" icon={faSackDollar}></FontAwesomeIcon>
                       </div>
                       <div>
                         <h4>Earning</h4>
-                        <h2>$198k</h2>
+                        <h1>$198k</h1>
                         <p>
-                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        <FontAwesomeIcon style={{color:"#2F8A5F"}} icon={faArrowUp}></FontAwesomeIcon> 30% this month
                         </p>
                       </div>
                     </div>
                     <div className="flex-stats">
                       <div>
-                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      <FontAwesomeIcon  className="fa-2xl icons icon2" icon={faMoneyCheckDollar}></FontAwesomeIcon>
                       </div>
                       <div>
-                        <h4>Earning</h4>
-                        <h2>$198k</h2>
+                        <h4>Balance</h4>
+                        <h1>$2.4k</h1>
                         <p>
-                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        <FontAwesomeIcon style={{color:"#C5255D"}} icon={faArrowDown}></FontAwesomeIcon> 30% this month
                         </p>
                       </div>
                     </div>
                     <div className="flex-stats">
                       <div>
-                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      <FontAwesomeIcon className="fa-2xl icons icon3" icon={faBagShopping}></FontAwesomeIcon>
                       </div>
                       <div>
-                        <h4>Earning</h4>
-                        <h2>$198k</h2>
+                        <h4>Total Sales</h4>
+                        <h1>$89k</h1>
                         <p>
-                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        <FontAwesomeIcon style={{color:"#2F8A5F"}} icon={faArrowUp}></FontAwesomeIcon> 30% this month
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="second-div">
-
+                  <div className="flex-stats2">
+                      <div>
+                         <h4>New Clients</h4>
+                         <h1>150</h1>
+                         <p>View afaflafj</p>
+                      </div>
+                      <div>
+                        <img alt="No image" className="person-image" src="./person.jpg"></img>
+                      </div>
+                  </div>
                 </div>
             </div>
     </div>
