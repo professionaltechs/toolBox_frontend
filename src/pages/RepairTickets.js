@@ -19,608 +19,298 @@ import {
   faPencil,
   faArrowUp,
   faArrowDown,
+  faUserCheck
 } from "@fortawesome/free-solid-svg-icons";
 
 export const RepairTickets = () => {
   return (
     <div className="App">
-      <div className="side-menu">
-        <div className="side-menu-container">
-          <div>
-            <FontAwesomeIcon
-              style={{ color: "white" }}
-              className="fa-2xl pt-5"
-              icon={faHouse}
-            />
-          </div>
-          <div className="menu-items">
-            <div>
-              <div className="link-div">
-              <a className="cash-register-link" href="No link">
-                  <FontAwesomeIcon
-                    className="fa-xl cashregister"
-                    icon={faCashRegister}
-                  />
-                   
-                  <span className="link-text">Cash Register</span>
-                </a>
+        <div className="side-menu">
+              <div className="home-icon">
+                      <FontAwesomeIcon style={{color:"white"}} className="fa-2xl" icon={faHouse}></FontAwesomeIcon>
               </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="repairs-link" href="No link">
-                  <FontAwesomeIcon className="fa-xl" icon={faWrench} />
-                  <span className="link-text">Repairs</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="devices-link" href="No link">
-                  <FontAwesomeIcon
-                    className="fa-xl"
-                    icon={faMobileScreenButton}
-                  />
-                  <span className="link-text">Devices</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="customers-link" href="No link">
-                  <FontAwesomeIcon className="fa-xl" icon={faUsers} />
-                  <span className="link-text">Customers</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="invoice-link" href="No link">
-                  <FontAwesomeIcon className="fa-xl" icon={faFilePdf} />
-                  <span className="link-text">Invoice</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="purchase-order-link" href="No link">
-                  <FontAwesomeIcon className="fa-xl" icon={faBoxOpen} />
-                  <span className="link-text">Purchase Order</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="appointment-link" href="No link">
-                  <FontAwesomeIcon className="fa-xl" icon={faCalendarCheck} />
-                  <span className="link-text">Appointment</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="link-div">
-                <a className="products-link" href="No link">
-                  <FontAwesomeIcon className="fa-xl" icon={faCartPlus} />
-                  <span className="link-text">Products</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className=" d-flex">
-            <div>
-              <FontAwesomeIcon style={{ color: "gold" }} icon={faPencil} />
-            </div>
-            <div>
-              <p className="ms-1 text-light">New-Note</p>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div className="navigation">
+                <ul>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl cash-register" icon={faCashRegister}></FontAwesomeIcon>
+                    <a  href="no link">
+                    Cash Register
+                    </a>
+                    </li>
 
-      <div className="header bg-white rounded-5 d-flex justify-content-around align-items-center  col-12">
-        <div className="logo d-flex justify-content-center ms-5  col-4">
-          <div>
-            <h6 className="logo-heading">Toolbox.co</h6>
-          </div>
-        </div>
-        <div className="navigation d-flex justify-content-center align-items-center col-8">
-          <div>
-            <ul>
-              <li>
-                <form className="input-form rounded-4">
-                  <a href="d">
-                    <FontAwesomeIcon
-                      style={{ color: "#A2A2A2" }}
-                      className="faMagnifyingGlass fa-lg"
-                      icon={faMagnifyingGlass}
-                    />
-                  </a>
-                  <input
-                    type="search"
-                    placeholder="Search"
-                    className="search rounded-4"
-                  ></input>
-                </form>
-              </li>
-              <li>
-                <FontAwesomeIcon className="faItem fa-xl" icon={faGear} />
-              </li>
-              <li>
-                <FontAwesomeIcon className="faItem fa-xl" icon={faClock} />
-              </li>
-              <li>
-                <FontAwesomeIcon className="faItem fa-xl" icon={faBell} />
-              </li>
-              <li>
-                <img
-                  src="./profile.png"
-                  className="profile-image"
-                  alt="Not loaded"
-                ></img>
-              </li>
-              <li>
-                <p className="profile-para">
-                  Musfiq{" "}
-                  <span>
-                    <br></br> Admin
-                  </span>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl repairs" icon={faWrench}></FontAwesomeIcon>
+                    <a href="no link">
+                    Repairs
+                    </a>
+                    </li>
 
-      
-      <div className="col-12 mt-4  d-flex justify-content-center align-items-center">
-        <div style={{marginLeft:"150px"}} className="col-10 bg-white rounded-4 gap-5 p-3 d-flex justify-content-between align-items-center">
-          <div className=" rounded-4 gap-4 p-1  d-flex justify-content-center align-items-center">
-            <div>
-              <FontAwesomeIcon
-                style={{ color: "#06AD4F" }}
-                className="fa-2xl"
-                icon={faUsers}
-              />
-            </div>
-            <div className="text-center">
-              <h7 style={{ color: "#B7B7B7" }}>Total active repairs</h7>
-              <p style={{ fontSize: "13px" }} className="m-0">
-              <FontAwesomeIcon style={{color:"#338659"}} icon={faArrowDown}></FontAwesomeIcon> <span style={{color:"#338659"}}>16%</span> this month
-              </p>
-            </div>
-            <div>
-              <h2>54</h2>
-            </div>
-          </div>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl devices" icon={faMobileScreenButton}></FontAwesomeIcon>
+                    <a href="no link">
+                    Devices
+                    </a>
+                    
+                    </li>
 
-          <div className="rounded-4 gap-4 p-1  d-flex justify-content-center align-items-center">
-            <div>
-              <FontAwesomeIcon
-                style={{ color: "#06AD4F" }}
-                className="fa-2xl"
-                icon={faUser}
-              />
-            </div>
-            <div className="text-center">
-              <h7 style={{ color: "#B7B7B7" }}>New repairs(Today)</h7>
-              <p style={{ fontSize: "13px" }} className="m-0">
-               <FontAwesomeIcon style={{color:"#A71A4C"}} icon={faArrowUp}></FontAwesomeIcon> <span style={{color:"#A71A4C"}}>16%</span> this month
-              </p>
-            </div>
-            <div>
-              <h2>18</h2>
-            </div>
-          </div>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl customers" icon={faUser}></FontAwesomeIcon>
+                    <a href="no link">
+                    Customers
+                    </a>
+                    </li>
 
-          <div className="rounded-4 gap-4 p-1 d-flex justify-content-center align-items-center">
-            <div>
-              <FontAwesomeIcon
-                style={{ color: "#06AD4F" }}
-                className="fa-2xl"
-                icon={faDesktop}
-              />
-            </div>
-            <div className="text-center">
-              <h7 style={{ color: "#B7B7B7" }}>Active Now</h7>
-            
-            </div>
-            <div>
-              <h2>189</h2>
-            </div>
-          </div>
-        </div>
-      </div>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl invoice" icon={faFilePdf}></FontAwesomeIcon>
+                    <a href="no link">
+                    Invoice
+                    </a>
+                    </li>
 
-      <div className="col-12 mb-4 d-flex justify-content-center align-items-center mt-2">
-        <div style={{marginLeft:"150px"}} className="col-10 bg-white rounded-4 d-flex flex-column justify-content-center align-items-center">
-          <div className="col-11 p-3 rounded-4 d-flex gap-3 justify-content-between bg-white align-items-center">
-            <div>
-              <h5 style={{ fontWeight: "bolder" }}>Active Tickets</h5>
-              <p style={{ color: "#75C0AA" }}>Active Tickets</p>
-            </div>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl purchase-order" icon={faBoxOpen}></FontAwesomeIcon>
+                    <a href="no link" className="purchase-link">
+                    Purchase Order
+                    </a>
+                    </li>
 
-            <div
-              style={{ backgroundColor: "#FAFBFF" }}
-              className="rounded-3 d-flex p-1 justify-content-center align-items-center"
-            >
-              <div>
-                <label style={{ color: "#9B9C9F", fontSize: "13px" }}>
-                  Sort by:
-                </label>
-              </div>
-              <div>
-                <select
-                  style={{
-                    backgroundColor: "#FAFBFF",
-                    fontSize: "13px",
-                    border: "none",
-                  }}
-                  class="form-select form-select-sm"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected>First Name</option>
-                  <option value="1">Last Name</option>
-                </select>
-              </div>
-            </div>
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl appointment" icon={faCalendarCheck}></FontAwesomeIcon>
+                    <a href="no link">
+                    Appointment
+                    </a>
+                    </li>
 
-            <div
-              style={{ backgroundColor: "#FAFBFF" }}
-              className="rounded-3 d-flex p-1 justify-content-center align-items-center"
-            >
-              <div>
-                <label style={{ color: "#9B9C9F", fontSize: "13px" }}>
-                  Date:
-                </label>
-              </div>
-              <div>
-                <select
-                  style={{
-                    backgroundColor: "#FAFBFF",
-                    fontSize: "13px",
-                    border: "none",
-                  }}
-                  class="form-select form-select-sm"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected>Newest</option>
-                  <option value="1">Oldest</option>
-                </select>
-              </div>
-            </div>
-
-            <div
-              style={{ backgroundColor: "#FAFBFF" }}
-              className="rounded-3 d-flex p-1 justify-content-center align-items-center"
-            >
-              <div>
-                <label style={{ color: "#9B9C9F", fontSize: "13px" }}>
-                  Status:
-                </label>
-              </div>
-              <div>
-                <select
-                  style={{
-                    backgroundColor: "#FAFBFF",
-                    fontSize: "13px",
-                    border: "none",
-                  }}
-                  class="form-select form-select-sm"
-                  aria-label=".form-select-sm example"
-                >
-                  <option selected>Open</option>
-                  <option value="1">Closed</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <form
-                style={{ backgroundColor: "#FAFBFF" }}
-                className="input-form rounded-4"
-              >
-                <a href="d">
-                  <FontAwesomeIcon
-                    style={{ color: "#A2A2A2" }}
-                    className="faMagnifyingGlass fa-lg"
-                    icon={faMagnifyingGlass}
-                  />
-                </a>
-                <input
-                  type="search"
-                  style={{ backgroundColor: "#FAFBFF" }}
-                  placeholder="Search"
-                  className="search rounded-4"
-                ></input>
-              </form>
-            </div>
-          </div>
-          <div className="col-11 bg-white rounded-4">
-            <table style={{ fontSize: "13px" }} className="table">
-              <thead>
-                <tr className="text-center">
-                  <th scope="col">Customer Name</th>
-                  <th scope="col">Phone Number</th>
-                  <th scope="col">Device</th>
-                  <th scope="col">Service</th>
-                  <th scope="col">Date Created</th>
-                  <th scope="col">Ticket#</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    <p className="m-0">12/07/2023</p>
-                    <p className="m-0">Tech: Nile Khokar</p>
-                    <p className="m-0">Last Update: 2:43 Pm</p>
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      className="text-success"
-                      style={{
-                        backgroundColor: "#A7E7D8",
-                        border: "solid 1px #55A791",
-                        padding:"3px 10px"
-                      }}
-                    >
-                      New
+                  <li>
+                    <FontAwesomeIcon style={{color:"white"}} className="fa-xl products" icon={faCartPlus}></FontAwesomeIcon>
+                    <a href="no link">
+                    Products
                     </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      className="text-alert"
-                      style={{
-                        padding:"3px 10px",
-                        color:"red",
-                        backgroundColor: "#FAC7C3",
-                        border: "solid 1px #A95C5B",
-                      }}
-                    >
-                      Not fixable
-                    </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                    style={{padding:"3px 10px"}}
-                      className="bg-primary text-light"
-                    >
-                      Sent Out
-                    </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      className="bg-warning text-dark"
-                      style={{padding:"3px 10px"}}
-                    >
-                      Finished
-                    </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      style={{
-                        padding:"3px 10px",
-                        color:"#3B5F82",
-                        backgroundColor: "#DF9FFF",
-                        border: "solid 1px #DF9FFF",
-                      }}
-                    >
-                      Waiting on customer
-                    </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      style={{
-                        padding:"3px 10px",
-                        color:"#3B5F82",
-                        backgroundColor: "#DF9FFF",
-                        border: "solid 1px #DF9FFF",
-                      }}
-                    >
-                      Waiting on customer
-                    </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      style={{
-                        padding:"3px 10px",
-                        color:"#3B5F82",
-                        backgroundColor: "#DF9FFF",
-                        border: "solid 1px #DF9FFF",
-                      }}
-                    >
-                      Waiting on customer
-                    </a>
-                  </td>
-                </tr>
-                <tr className="text-center">
-                  <td>Jane Cooper</td>
-                  <td>(225) 555-0118</td>
-                  <td>
-                    Apple <br></br> <span>Iphone14</span>{" "}
-                  </td>
-                  <td>Screen Replacement</td>
-                  <td>
-                    12/07/2023 <br></br> Tech: <span>Nile Khokar</span>{" "}
-                  </td>
-                  <td>t100</td>
-                  <td>
-                    <a
-                      style={{
-                        padding:"3px 10px",
-                        color:"#3B5F82",
-                        backgroundColor: "#DF9FFF",
-                        border: "solid 1px #DF9FFF",
-                      }}
-                    >
-                      Waiting on customer
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="col-11 rounded-4 d-flex gap-3 justify-content-between bg-white align-items-center">
-            <div>
-              <p style={{ color: "#B4B4B6" }}>
-                Showing data 1 to 8 of 256k entries
-              </p>
-            </div>
-
-            <div>
-              <nav aria-label="Page navigation example">
-                <ul className="pagination">
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                      aria-label="Previous"
-                    >
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                    >
-                      1
-                    </a>
-                  </li>
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                    >
-                      2
-                    </a>
-                  </li>
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                    >
-                      3
-                    </a>
-                  </li>
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                    >
-                      4
-                    </a>
-                  </li>
-                  <li className="me-2">...</li>
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                    >
-                      40
-                    </a>
-                  </li>
-                  <li className="page-item me-2">
-                    <a
-                      style={{ backgroundColor: "#F5F5F5" }}
-                      className="page-link text-dark"
-                      href="No link"
-                      aria-label="Next"
-                    >
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
+                    </li>
                 </ul>
-              </nav>
+              </div>
+              <div className="notes-icon">
+                <div>
+                  <FontAwesomeIcon style={{color:"white"}} className="fa-md" icon={faPencil}></FontAwesomeIcon>
+                  </div>
+                  <div>
+                  <p className="notes-para">New-Note</p>
+                  </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+
+            <div className='header'>
+              <div className='navbar'>
+                  <div className='logo'>
+                    <h4>ToolBox.co</h4>
+                  </div>
+                  <div className='navbar-links'>
+                    <div className='input-search'>
+                      <div className='search'>
+                      <FontAwesomeIcon style={{color:"#8A8A8A"}} className='fa-lg' icon={faMagnifyingGlass}></FontAwesomeIcon>
+                      <input type='search' placeholder='Search'></input>
+                      </div>
+                    <div>
+                      <FontAwesomeIcon className="fa-xl" icon={faGear}></FontAwesomeIcon>
+                    </div>
+                  <div>
+                      <FontAwesomeIcon className='fa-xl' icon={faClock}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <FontAwesomeIcon className='fa-xl' icon={faBell}></FontAwesomeIcon>
+                    </div>
+                    <div className='profile'>
+                        <div>
+                          <img src='./profile.png' alt='not working' className='profile-image'></img>
+                        </div>
+                        <div>
+                          <h5>
+                            Musfiq
+                          </h5>
+                          <p>Admin</p>
+                        </div>
+                    </div>
+              </div>
+              </div>
+            </div>
+            </div>
+
+            <div className='stats'>
+                <div className='stats-container'>
+                  <div>
+                    <FontAwesomeIcon style={{color:"#0BA951"}} className='fa-xl icon' icon={faUsers}></FontAwesomeIcon>
+                  </div>
+                  <div className='stats-heading'>
+                    <h5>Total active repairs</h5>
+                    <p><FontAwesomeIcon  icon={faArrowUp} style={{color:"#2F8A5F"}}></FontAwesomeIcon> <span style={{color:"#2F8A5F",fontWeight:"bolder"}}>16%</span> this month</p>
+                  </div>
+                  <div>
+                    <h2>54</h2>
+                  </div>
+                </div>
+
+                <div className='stats-container'>
+                  <div>
+                    <FontAwesomeIcon style={{color:"#0BA951"}} className='fa-xl icon' icon={faUserCheck}></FontAwesomeIcon>
+                  </div>
+                  <div className='stats-heading'>
+                    <h5>New repairs (Today)</h5>
+                    <p><FontAwesomeIcon  icon={faArrowDown} style={{color:"#C5255D"}}></FontAwesomeIcon> <span style={{color:"#C5255D",fontWeight:"bolder"}}>1%</span> this week</p>
+                  </div>
+                  <div>
+                    <h2>18</h2>
+                  </div>
+                </div>
+
+                <div className='stats-container'>
+                  <div>
+                    <FontAwesomeIcon style={{color:"#0BA951"}} className='fa-xl icon' icon={faDesktop}></FontAwesomeIcon>
+                  </div>
+                  <div className='stats-heading'>
+                    <h5 className="active-heading">Active Now</h5>
+                  </div>
+                  <div>
+                    <h2>189</h2>
+                  </div>
+                </div>
+            </div>
+
+
+            <div className="table-container">
+              <div className="sort-container">
+                <div className="active-tickets">
+                  <h3>Active Tickets</h3>
+                  <p>Active Tickets</p>
+                </div>
+                <div className="sort-name">
+                    <form>
+                      <label>
+                        Sort by:
+                      </label>
+                      <select>
+                        <option value="first-name">First Name</option>
+                        <option value ="second-name">Second Name</option>
+                      </select>
+                    </form>
+                </div>
+                <div className="sort-date">
+                    <form>
+                      <label>
+                        Date:
+                      </label>
+                      <select>
+                        <option value="newest">Newest</option>
+                        <option value ="oldest">Oldest</option>
+                      </select>
+                    </form>
+                </div>
+                <div className="status">
+                    <form>
+                      <label>
+                        Status:
+                      </label>
+                      <select>
+                        <option value="open">Open</option>
+                        <option value ="closed">Closed</option>
+                      </select>
+                    </form>
+                </div>
+                <div>
+                <div style={{backgroundColor:"#FAFBFF",padding:"2px 5px"}} className='search'>
+                      <FontAwesomeIcon style={{color:"#8F9094"}} className='fa-md' icon={faMagnifyingGlass}></FontAwesomeIcon>
+                      <input className="search2" type='search' placeholder='Search'></input>
+                      </div>
+                </div>
+              </div>
+              
+              <div className="table">
+                <table>
+                  <thead>
+                    <th>Customer Name</th>
+                    <th>Phone Number</th>
+                    <th>Device</th>
+                    <th>Service</th>
+                    <th>Date Created</th>
+                    <th>Ticket #</th>
+                    <th>Status</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device first-device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created first-dateCreated"><p>12/07/2023</p><p>Tech:Nile Khokar</p><p>Last Update: 2:43Pm</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jane Cooper</td>
+                      <td>(225) 555-0118</td>
+                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
+                      <td>Screen Replacement</td>
+                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
+                      <td>t100</td>
+                      <td><button className="status-btn">New</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
     </div>
   )
 }

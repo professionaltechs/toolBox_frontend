@@ -1,126 +1,297 @@
-html {
-    overflow-x: hidden;
-  }
-  body{
-    margin: 0;
-    padding: 0;
-    background-color: #E9E8EE;
-    overflow-x: hidden;
-  }
-  .App{
-    position: relative;
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+body{
+  background-color: #EAE8E9;
+}
+.side-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #06B8DE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0px;
+  border-radius: 0px 20px 20px 0px;
+}
 
-  }
-  .side-menu{
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #06B8DE;
-    height: 100vh;
-    border-radius: 0px 10px 10px 0px;
-  }
-  .side-menu-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  .header {
-    position: relative;
-    z-index: -1;
-    transform: scale(1.02);
-  }
-  
-  
-  .menu-items{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .menu-items a{
-    text-decoration: none;
-    color: white;
-    font-size: 13px;
-  }
-  .link-div{
-    padding: 20px;
-  }
-  .link-text{
-    margin-left: 10px;
-  }
-  .menu-items > div{
-    text-align: center;
-    width: 100%;
-    border-bottom: solid 1px white;
-  }
-  .navigation ul {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
+.navigation ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  list-style: none;
+}
+.navigation ul li{
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding: 2px 1px 12px 1px;
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+.cash-register{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.repairs{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.devices{
+  margin-right: 10px;
+  margin-left: 6px;
+}
+.customers{
+  margin-right: 8px;
+  margin-left: 5px;
+}
+.invoice{
+  margin-right: 6px;
+  margin-left: 5px;
+}
+.purchase-order{
+  margin-right: 5px;
+}
+
+.appointment{
+  margin-left: 5px;
+  margin-right: 7px;
+}
+.products{
+  margin-left: 1px;
+  margin-right: 7px;
+}
+.notes-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.notes-para{
+  margin-bottom: 0px;
+  color: white;
+  font-size: 13px;
+}
+
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 0px 0px 40px 0px;
+}
+.navbar{
+  width: 78%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.search{
+  background-color: #D8D8D8;
+  border-radius: 7px;
+  padding: 7px;
+}
+input[type="search"]{
+  background-color: transparent;
+  padding-left: 5px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+input[type="search"]::placeholder{
+  font-size: 14px;
+}
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.profile-image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.profile h5{
+  margin: 0px;
+  font-weight: bolder;
+}
+.profile p{
+  margin: 0px;
+  font-size: 12px;
+}
+
+
+
+.stats{
+  margin-left: 80px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 0px 20px;
+}
+.stats-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.stats-heading h5{
+  font-size: 14px;
+  margin-bottom: 0px;
+  color: #B7B7B7;
+}
+.stats-heading p{
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+.active-heading{
+  margin-top: 0px;
+}
+.icon{
+  padding: 12px;
+  background-color: #E0FEEF;
+  border-radius: 50%;
+}
+
+
+.table-container{
+  margin-left: 100px;
+  width: 87%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+.sort-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+.active-tickets p{
+  margin-top: 0px;
+  color: #7BD2BA;
+  font-size: 12px;
+  font-weight: bolder;
+}
+.active-tickets h3{
+  margin-bottom: 0px;
+}
+.search2::placeholder{
+  color: #CACBCF;
+}
+select{
+  width: 116px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.status,.sort-date,.sort-name{
+  background-color: #FAFBFF;
+}
+.status,.sort-date,.sort-name label{
+  font-size: 14px;
+  color: #B7B7B7;
+}
+
+.table{
+  width: 100%;
+}
+thead{
+  position: relative;
+}
+thead::after{
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ABABAB;
+}
+.table table{
+  width: 100%;
+}
+
+th{
+  font-size: 13px;
+}
+tr{
+  text-align: center;
+  font-size: 12px;
   }
  
-  .faItem{
-    padding-top: 7px;
-  }
-  .input-form{
-    background-color: #D8D8D8;
-    display: flex;
-    padding: 3px;
-  }
-  .profile-para{
-    font-weight: bolder;
-    text-align: center;
+
+.device p:nth-child(1){
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.device P:nth-child(2){
+  margin-top: 0px;
+}
+
+.date-created p:nth-child(1){
+  margin-top: 0px;
     margin-bottom: 0px;
-  }
-  .profile-para > span{
-    font-weight: lighter;
-    font-size: 14px;
-  }
-  
-  .search{
-    padding-left: 10px;
-    width: 200px;
-    height: 30px;
-    background-color: lightgrey;
-    border: none;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .navigation ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-    position: relative;
-  }
-  .logo-heading{
-    margin-top: 5px;
-    font-size: 20px;
-  }
-  
-  .profile-image{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-  }
-  .repairs-link,.devices-link,.invoice-link{
-    margin-right: 45px;
-  }
-  .customers-link{
-    margin-right: 30px;
-  }
-  .cash-register-link{
-    margin-right: 5px;
-  }
-  .appointment-link{
-    margin-right: 15px;
-  }
-  .products-link{
-    margin-right: 40px;
-  }
-  a{text-decoration: none;}
+}
+.date-created p:nth-child(2){
+  margin: 0px;
+}
+.date-created P:nth-child(3){
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.status-btn{
+  width: 90%;
+  background-color: #A7E7D6;
+  height: 25px;
+  border: solid 1px #5BA792;
+  color: #188369;
+  border-radius: 3px;
+}
+
+.first-dateCreated p:nth-child(1){
+  margin-top: 10px;
+}
+.first-device p:nth-child(1){
+  margin-top: 10px;
+}
