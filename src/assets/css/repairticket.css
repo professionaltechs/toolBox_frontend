@@ -163,7 +163,7 @@ input[type="search"]::placeholder{
   justify-content: space-around;
   align-items: center;
   border-radius: 25px;
-  margin-top: 20px;
+  margin-top: 13px;
   padding: 15px 20px;
 }
 .stats-container{
@@ -199,7 +199,7 @@ input[type="search"]::placeholder{
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .sort-container,.data-container{
   display: flex;

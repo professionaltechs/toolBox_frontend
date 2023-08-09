@@ -25,6 +25,9 @@ import {
   faCartFlatbed,
   faBitcoinSign,
   faArrowUp,
+  faArrowDown,
+  faMoneyCheckDollar,
+  faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/css/dashboard.css"
@@ -108,7 +111,7 @@ export const Dashboard = () => {
   return (
     <div className="App">
       <SideBarThree/>
-      <div className='header'>
+      <div className='header2'>
               <div className='navbar'>
                   <div className='logo'>
                     <h4>ToolBox.co</h4>
@@ -153,46 +156,184 @@ export const Dashboard = () => {
                   <div className="nile-stats" style={{width:"100%"}}>
                     <div className="flex-stats">
                       <div>
-                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      <FontAwesomeIcon className="fa-2xl icons icon1" icon={faSackDollar}></FontAwesomeIcon>
                       </div>
                       <div>
                         <h4>Earning</h4>
-                        <h2>$198k</h2>
+                        <h1>$198k</h1>
                         <p>
-                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        <FontAwesomeIcon style={{color:"#2F8A5F"}} icon={faArrowUp}></FontAwesomeIcon> 30% this month
                         </p>
                       </div>
                     </div>
                     <div className="flex-stats">
                       <div>
-                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      <FontAwesomeIcon  className="fa-2xl icons icon2" icon={faMoneyCheckDollar}></FontAwesomeIcon>
                       </div>
                       <div>
-                        <h4>Earning</h4>
-                        <h2>$198k</h2>
+                        <h4>Balance</h4>
+                        <h1>$2.4k</h1>
                         <p>
-                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        <FontAwesomeIcon style={{color:"#C5255D"}} icon={faArrowDown}></FontAwesomeIcon> 30% this month
                         </p>
                       </div>
                     </div>
                     <div className="flex-stats">
                       <div>
-                      <FontAwesomeIcon className="fa-xl icons" icon={faSackDollar}></FontAwesomeIcon>
+                      <FontAwesomeIcon className="fa-2xl icons icon3" icon={faBagShopping}></FontAwesomeIcon>
                       </div>
                       <div>
-                        <h4>Earning</h4>
-                        <h2>$198k</h2>
+                        <h4>Total Sales</h4>
+                        <h1>$89k</h1>
                         <p>
-                        <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon> 30% this month
+                        <FontAwesomeIcon style={{color:"#2F8A5F"}} icon={faArrowUp}></FontAwesomeIcon> 30% this month
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="second-div">
-
+                  <div className="flex-stats2">
+                      <div>
+                         <h4>New Clients</h4>
+                         <h1>150</h1>
+                         <p>View afaflafj</p>
+                      </div>
+                      <div>
+                        <img alt="No image" className="person-image" src="./person.jpg"></img>
+                      </div>
+                  </div>
                 </div>
             </div>
+
+
+            <div className="charts-stats">
+                <div className="calendar">
+                    <Calendar onChange={onChange} value={date}></Calendar>
+                </div>
+            </div>
+
+
+            <div className="menu-items">
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faQrcode}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Dashboard</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faUsers}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Customers</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faWrench}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Repairs</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faCalendarCheck}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Appointments</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faTruck}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Stock Tale</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faQrcode}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Sales reports</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faQrcode}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>End of Day</a>
+                      </div>
+                </div>
+            </div>
+
+
+
+            <div className="menu-items">
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faQrcode}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Expenses</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faQrcode}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Products</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faMobileScreenButton}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Devices</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faCartPlus}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Inventory</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faFilePdf}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Invoices</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faQrcode}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Repair Reports</a>
+                      </div>
+                </div>
+                <div className="item">
+                  <div>
+                    <FontAwesomeIcon className="fa-2xl" icon={faBitcoinSign}></FontAwesomeIcon>
+                    </div>
+                    <div>
+                      <a>Integrations</a>
+                      </div>
+                </div>
+            </div>
+
     </div>
   );
 };
