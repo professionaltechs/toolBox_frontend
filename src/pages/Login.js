@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "../assets/css/login.css";
+import { axiosInstance } from "../axios";
 
 export const Login = () => {
     const [email, setEmail] = useState("")
@@ -13,9 +14,20 @@ export const Login = () => {
 
         console.log(email, password)
 
-        if(email === "test@gmail.com" && password === "123456"){
-            navigate("/dashboard")
-        }
+        axiosInstance({
+          method: "post",
+          url: "agent/signin",
+          data: {
+            email,
+            accountName: "company", 
+            password
+          }
+        }).then(res => {
+          console.log(res)
+          localStorage.setItem("toolBoxToken", res.data.token)
+          localStorage.setItem("isLoggedIn", "true")
+          navigate("/dashboard")
+        }).catch(err => console.log(err))
     }
   return (
     <div className="loginContainer">

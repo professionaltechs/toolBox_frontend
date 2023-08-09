@@ -12,8 +12,29 @@ import {
   faUserCheck
 } from "@fortawesome/free-solid-svg-icons";
 import { SideBarThree } from "../components/SideBarThree";
+import { TableRow } from "../components/repairTickets/TableRow";
+import { useState } from "react";
+import { axiosAuthInstance } from "../axios";
+import { useEffect } from "react";
 
 export const RepairTickets = () => {
+
+  const [tickets, setTickets] = useState([]);
+
+  const fetchTickets = async () => {
+    axiosAuthInstance({
+      method: "post",
+      url: "repair-ticket/get-all-repair-ticket",
+    }).then(res => {
+      console.log(res.data.message)
+      setTickets(res.data.message)
+    }).catch(err => {console.log(err.message)})
+  }
+
+  useEffect(() => {
+    fetchTickets()
+  }, [])
+
   return (
     <div className="App">
       <SideBarThree/>
@@ -155,81 +176,17 @@ export const RepairTickets = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device first-device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created first-dateCreated"><p>12/07/2023</p><p>Tech:Nile Khokar</p><p>Last Update: 2:43Pm</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-new">New</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-notfix">Not fixable</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-out">Sent Out</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-new">New</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-new">New</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-finish">Finished</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-wait">Waiting on Customer</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jane Cooper</td>
-                      <td>(225) 555-0118</td>
-                      <td className="device"><p>Apple</p><p>Iphone 14</p></td>
-                      <td>Screen Replacement</td>
-                      <td className="date-created"><p>12/07/2023</p><p>Tech:Nile Khokar</p></td>
-                      <td>t100</td>
-                      <td><button className="status-btn btn-finish">Finished</button></td>
-                    </tr>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
+                    <TableRow customerName="Jane Cooper" phone="(225) 555-0118" device="Iphone13" service="Screen Replacement" dateCreated="12/07/2023" ticket="t100" status="new"/>
                   </tbody>
                 </table>
               </div>
+              
 
               <div className="data-container">
                 <div>
