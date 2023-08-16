@@ -1,10 +1,13 @@
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "../assets/css/login.css";
 import { axiosInstance } from "../axios";
+import { DomainContext } from "../contexts/DomainProvider";
 
 export const Login = () => {
+  const { domain } = useContext(DomainContext)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     let navigate = useNavigate();
@@ -19,7 +22,7 @@ export const Login = () => {
           url: "agent/signin",
           data: {
             email,
-            accountName: "company", 
+            companyName: domain, 
             password
           }
         }).then(res => {
