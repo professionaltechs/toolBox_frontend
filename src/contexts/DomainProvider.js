@@ -8,7 +8,7 @@ export const DomainProvider = ({children}) => {
     console.log(window.location.host.split(".")[0])
 
     useEffect(() => {
-        const dom = window.location.host.split(".")[0] === ('localhost:3000' || 'localhost:3001' || 'toolboxapp') ? '' : window.location.host.split(".")[0]
+        const dom = window.location.host.split(".")[0] === 'toolboxapp' ? '' : window.location.host.split(".")[0]
         setDomain(dom)
         console.log(dom)
     }, [])
