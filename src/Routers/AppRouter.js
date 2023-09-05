@@ -1,23 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Dashboard, Login, RepairTickets, Signup, SubDomainLogin, Subscription } from "../pages";
+import { Dashboard, Login, RepairTickets, Signup, SubDomainLogin, Subscription, LandingPage } from "../pages";
 import { Protected } from "../components"
 import { DomainContext } from "../contexts/DomainProvider";
 
 export const AppRouter = () => {
-    const { domain, setDomain } = useContext(DomainContext);
-
-    console.log(window.location.host.split(".")[0])
-
-    useEffect(() => {
-        const dom = window.location.host.split(".")[0] === 'localhost:3000' ? '' : window.location.host.split(".")[0]
-        setDomain(dom)
-    }, [])
+    const { domain } = useContext(DomainContext);
 
   return (
     <Routes>
         {domain === '' && <>
-            <Route path="/" element={<Signup />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/subdomain-login" element={<SubDomainLogin />} />
         </>}
       {domain !== '' && <>

@@ -24,7 +24,7 @@ export const SubDomainLogin = () => {
 
         setDomain(subDomain)
 
-        window.location = `http://${subDomain}.localhost:3000/login`
+        window.location = `http://${subDomain}.localhost:3001/login`
         
     }
   return (
