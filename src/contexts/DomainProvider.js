@@ -10,9 +10,10 @@ export const DomainProvider = ({children}) => {
     useEffect(() => {
         const dom = window.location.host.split(".")[0] === ('localhost:3000' || 'localhost:3001' || 'toolboxapp') ? '' : window.location.host.split(".")[0]
         setDomain(dom)
+        console.log(dom)
     }, [])
 
-    console.log(domain)
+    // console.log(domain)
     return(
         <DomainContext.Provider value={{domain, setDomain}}>
             {children}
