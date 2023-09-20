@@ -41,7 +41,7 @@ export const Signup = () => {
       navigate("/subdomain-login")
     }).catch(err => {
       alert(err.message)
-      console.log(err.message)
+      console.log(err)
     })
   };
 
@@ -70,7 +70,7 @@ export const Signup = () => {
                 />
               </div>
               <div class="login__field">
-                <i class="login__icon fas fa-user"></i>
+                {/* <i class="login__icon fas fa-user"></i> */}
                 <h3 class="signup__input" style={{ border: "none" }}>
                   Domain: {company}.Toolbox.com
                 </h3>

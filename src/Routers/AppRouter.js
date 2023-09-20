@@ -15,6 +15,9 @@ export const AppRouter = () => {
             <Route path="/subdomain-login" element={<SubDomainLogin />} />
         </>}
       {domain !== '' && <>
+      <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/subdomain-login" element={<SubDomainLogin />} />
         <Route path="/login" element={<Login />} />
         <Route
             path="/dashboard"
